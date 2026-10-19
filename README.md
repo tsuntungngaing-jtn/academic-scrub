@@ -1,13 +1,8 @@
 # academic-scrub
 
-Cursor / Codex Agent Skill：去掉学术稿里的 **AI 腔** 和 **作业/免责元话语**（中英）。
+Cursor / Codex Agent Skill：从学术稿中去掉 **过程污染**（作业/评分/提示词/用户-代理对话/装配元话语/无实质免责），而不是把文字改得“更学术”或“更不像 AI”。
 
-典型目标句：
-
-- 「这份作业重点讨论XXXX，对此本文XXX」
-- `this report` / `as required by the assignment` / `The subsequent sections…`
-
-保留数字、公式、引用键；不为规避 AI 披露而改写。
+中英均适用。保留研究逻辑、数字、公式、引用键与有用的图表章节指引。
 
 ## Install
 
@@ -21,21 +16,22 @@ Or point your agent at `SKILL.md`.
 
 ```
 /academic-scrub
-# or: 去AI腔 / 去免责条款 / 再次检查修改终版论文
+# or: 去AI腔 / 去免责条款 / 去过程污染 / 再次检查修改终版论文
 ```
 
 ## Layout
 
 | File | Role |
 |------|------|
-| [`SKILL.md`](SKILL.md) | Workflow + hard constraints |
-| [`reference-patterns.md`](reference-patterns.md) | L0–L3 pattern catalog |
+| [`SKILL.md`](SKILL.md) | Trigger, constraints, pass workflow |
+| [`semantic-rules.md`](semantic-rules.md) | Function-based L0–L4 rules (authority) |
+| [`reference-patterns.md`](reference-patterns.md) | Search hints, not a blacklist |
 | [`examples.md`](examples.md) | Before / after |
 
 ## Related
 
-- Upstream AI-tell catalog: [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) (different job: voice/evidence layers + grant mode)
-- This skill’s extra job: coursework leakage + Chinese disclaimer scrub
+- Upstream AI-tell / grant layers: [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) — different job
+- This skill: process contamination + Chinese assignment leakage, judged by **function**
 
 ## License
 

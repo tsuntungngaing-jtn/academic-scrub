@@ -1,97 +1,53 @@
-# Academic Scrub — pattern catalog
+# Academic Scrub — candidate cues (not a blacklist)
 
-Sourced from MFE209TC personal-homework cleanup (meta clean, Ctrl+F leakage, leakage audit, academic-humanizer audits) plus the Sep 2026 writing-rules prompt.
+Use these as **search hints** while classifying function. A hit is not an automatic delete. See [`semantic-rules.md`](semantic-rules.md).
 
-## L0 — Assignment / disclaimer leakage
+## L0 — Interaction / provenance (hints)
 
-### Chinese
+as requested / as instructed / based on your instructions / the user asked / according to the prompt / following the prompt / the prompt requires / the instructions above / as specified in the task / in response to the feedback / the previous version / this revision / I have revised / I was asked to / the requested structure / I will now / we will now / the following response / the answer below
 
-| Cue | Action |
-|-----|--------|
-| 这份作业重点讨论… | Delete; open with scientific gap/motivation |
-| 对此本文… / 因此本文将… | Delete or → direct claim about the topic |
-| 根据作业要求 / 评分标准 / 为满足…要求 | Never in body |
-| 本文旨在完成课程… | → research objective in technical terms |
-| 与团队项目 / team project 的关系是… | Remove from individual paper body |
-| 本报告 / 本次作业 | → 本文 / 本综述 / 本分析（或直接删主语） |
+CN: 按你的要求 / 根据提示词 / 按反馈修改 / 上一版 / 本次修订 / 我被要求
 
-### English
+## L1 — Assignment / course / rubric (hints)
 
-| Cue | Action |
-|-----|--------|
-| this assignment / coursework / marking / rubric | Remove |
-| as required by / to satisfy the requirement / according to the instructions | Remove |
-| this report (body) | → this review / the present analysis / drop subject |
-| this module / in this module | → considered here / under review |
-| team project / preparation for prototyping | Technical scope only |
-| selected for the prototype / present prototype / prototype system | → sensing implementation / bending-mode sensing |
-| required by assignment (tables) | → under review |
-| Role in this report | → Role in the present review |
-| Arduino Uno / Arduino ADC (lab-kit voice) | → 10-bit microcontroller ADC / microcontroller ADC |
-| Student ID / Learning Mall / module handbook (body) | Cover/declaration only |
+assignment / coursework / module / rubric / marking criteria / marking scheme / learning outcomes / as required by / to satisfy the requirement / for this assignment / course examples / course chain / project brief / team project / preparation for prototyping / Learning Mall / Student ID (body)
 
-### Keep on purpose
+CN: 这份作业 / 本作业 / 课程作业 / 作业要求 / 评分标准 / 对此本文 / 因此本文将 / 本文旨在完成 / 为满足要求 / 与团队项目的关系
 
-- Required **AI Usage Declaration** cover bullets (coursework rule).
-- Bibliographic titles containing “Handbook”.
-- Necessary scientific limits (“should not be ranked directly” when metrics differ; “analogy, not direct evidence”).
+**Keep:** methods that were taught; required AI-declaration cover; bibliographic “Handbook”.
 
-## L1 — Meta-discourse / roadmap filler
+Arduino Uno as **lab-kit voice** → microcontroller ADC (keep bit depth / N). Prototype-as-homework → sensing implementation when that is the science.
 
-| Cue | Prefer |
-|-----|--------|
-| The subsequent sections compare… | One content sentence naming the topics without TOC voice |
-| This section examines… | Lead with the governing parameters / mechanism |
-| The following five … one paper at a time; The survey focuses on… | “Five studies are examined through structures, experiments, and claimed metrics…” |
-| rather than an exhaustive list | Drop defensive clause; name what Fig. shows |
-| why this structure was chosen / how the report satisfies | Delete |
-| It should be noted / It is worth noting / Notably, / Importantly, | Delete opener; keep payload if any |
-| Defensive duplicates of the same “rather than…” across sections | Keep **one** strong instance |
+## L2 — Document-production narration (hints)
 
-## L2 — AI tells (condensed)
+The subsequent sections… / This section examines/will discuss… / The remaining checks follow… / The table below addresses the requirements… / A named product is given in Section… / why this structure was chosen / how this report satisfies / one paper at a time
 
-### Vocabulary / rhetoric
+**Keep:** Table/Fig/Eq/Section when they locate substance.
 
-delve, underscore, intricate, tapestry, testament, landscape (abstract), pivotal, showcase, foster, leverage (filler), realm, seamless, groundbreaking, cutting-edge, transformative, rich/vibrant (figurative)
+## L3 — Defensive rhetoric (hints)
 
-### Structures
+It should be noted/emphasised that / It is important to acknowledge / It is worth mentioning / This should not be interpreted as / This is not intended/meant to / The authors do not claim / This does not necessarily imply / rather than an exhaustive list (when duplicated or empty)
 
-- In recent years… / With the rapid development… / Despite recent advances…
-- Moreover / Furthermore / Additionally / In particular as consecutive openers
-- not only X but also Y; rule-of-three padding
-- serves as → is
-- Em dash `—` → commas, parentheses, or split sentences
-- Sentences ≳30 words or 3+ stacked subordinates → split
+**Keep:** one calibrated limit (“metrics use different definitions and must not be ranked directly”); scientific negation that distinguishes measurands.
 
-### Over-claim / hype
+## L4 — Formulaic surface (hints, only if filler)
 
-prove, demonstrate (universal), establish/confirm/guarantee (overstrong), significantly (no test/number), paves the way, sheds light, paramount, bridges the gap, extensive/comprehensive experiments, a wide range of, to the best of our knowledge, for the first time, novel (more than once per section)
+In recent years / With the rapid development / 近年来…受到广泛关注  
+delve, underscore, intricate, tapestry, pivotal, seamless, leverage (filler), foster, realm, showcase, groundbreaking, paramount, paves the way, sheds light  
+Moreover / Furthermore / Additionally as consecutive openers  
+not only X but also Y; rule-of-three padding  
+prove / significantly (no number) / comprehensive understanding / multifaceted / nuanced  
+em dash `—` in prose → comma / parentheses / split  
+≳30-word or 3-clause stacks → split **only if** they hide filler, not if they carry a mechanism
 
-### Soften examples
+## Claim strength (constraint)
 
-| Bad | Better |
-|-----|--------|
-| We prove … significantly outperforms | … improves X by a–b over strongest baseline (Table N) |
-| paves the way for a new paradigm | addresses failure mode Y (Section N) |
-| extensive experiments on a wide range | evaluate on three datasets (named) |
+Unbacked comparative adjective → cite Fig/Table or soften. Verb ≤ evidence. Keep: suggests, may, consistent with, appears to.
 
-## L3 — Claim ↔ evidence
+## Silent compliance
 
-- Unbacked comparative adjective → add Fig/Table/cite or soften.
-- Verb stronger than evidence → downgrade.
-- Keep calibrated hedging: suggests, may, consistent with, appears to.
+If a brief is supplied: Yes/No pillars only. Never narrate compliance in the manuscript.
 
-## Silent compliance (brief only)
+## Residual
 
-If an assignment brief is supplied, check pillars Yes/No only. Never narrate compliance in the manuscript.
-
-## Ctrl+F residual needles (body + tables)
-
-```
-assignment|coursework|module|marking|rubric|this report|required by|as requested|
-team project|subsequent sections|this section examines|this section will|
-one paper at a time|exhaustive list|preparation for prototyping|
-这份作业|本作业|作业要求|评分标准|对此本文|本文旨在满足
-```
-
-Exclude: AI cover zone; reference entries with Handbook; intentional “reported” in results language.
+Do **not** Ctrl+F-delete `this report` / `this section` / `this study` / `requirement` / `following` / `limitation`. Re-read hits for **function**. Exclude AI cover zone and reference titles.
