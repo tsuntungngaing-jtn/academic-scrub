@@ -1,5 +1,7 @@
 # Academic Scrub — before / after
 
+Domain examples are illustrative; apply the **function**, not the topic.
+
 ## 1. Chinese disclaimer (L1)
 
 **Before:**  
@@ -30,37 +32,98 @@ The review compares the two operating principles, RC-time-constant and voltage-d
 
 ---
 
-## 4. Defensive file clarification (L3)
+## 4. Negative model definition → positive scope (L3)
 
 **Before:**  
-The conductive body is the imported flexible-ink mesh. A second 3MF file, a printed composite trace whose file name contains R12, is stored with it. These two meshes are the geometry inputs. They are not a SolidWorks drawing set, and they are not three CAD projects named P, F, and R16.
+Damage, intrinsic piezoresistivity and time-dependent behaviour are not part of this model.
 
 **After:**  
-The geometry inputs are the imported flexible-ink mesh and a second 3MF composite-trace mesh identified as R12.
+The formulation describes geometry-driven resistance change within the elastic regime. Intrinsic piezoresistive and time-dependent effects remain beyond the present constitutive formulation.
+
+*(If those mechanisms never enter the argument, prefer deleting the exclusion list entirely after stating what the model describes.)*
 
 ---
 
-## 5. Requirement language (L1)
+## 5. “No claim is made” → evidence status (L3)
 
 **Before:**  
-For the strain-and-bending scene in Fig. 1(b), Table II leaves one paired requirement. The voltage has to follow the surface strain closely enough to be a precise reading, and the same trace has to carry that bending without a local peak that would crack or drift it.
+No particular camera is claimed to achieve this requirement.
 
 **After:**  
-For strain and bending, the design must balance measurement accuracy against local mechanical demand. The voltage should track surface strain closely, while the trace must accommodate bending without excessive local strain that could cause cracking or drift.
+Whether these limits can be achieved with the experimental imaging system remains to be established.
 
 ---
 
-## 6. Defensive qualification (L3)
+## 6. “X cannot establish Y” → what Y requires (L3)
 
 **Before:**  
-The 99th percentile is a choice: a 90th or 95th percentile would blunt real hotspots, and the 100th percentile is the mesh-sensitive maximum. It is a static design objective, not a measured fatigue life.
+A motor encoder cannot establish local strain.
 
 **After:**  
-The 99th percentile balances sensitivity to local hotspots against the mesh sensitivity of the absolute maximum. C99 is used as a static measure of strain concentration rather than a fatigue-life metric.
+Local strain therefore requires deformation information beyond actuator position alone.
 
 ---
 
-## 7. Checklist-style reasoning (L1)
+## 7. Command tone → scientific consequence (L3)
+
+**Before:**  
+If the validation chain cannot meet the limits, declare surface strain as the measurand and recompute the calibration.
+
+**After:**  
+If these limits cannot be achieved, the experimentally accessible surface strain would provide the more appropriate measurand, with calibration, sensitivity, and uncertainty defined on that basis.
+
+---
+
+## 8. We-stack in methods (L4)
+
+**Before:**  
+We use \(t\) for conductor thickness. We change \(t\) while keeping \(E_c\) fixed. We selected 1 GPa.
+
+**After:**  
+Conductor thickness is denoted by \(t\). Thickness sensitivity is evaluated by varying \(t\) while holding \(E_c\) and the remaining model parameters constant. \(E_c=1\) GPa is selected as the geometric midpoint of the investigated range.
+
+---
+
+## 9. Abrupt gadget opening → topic sentence (L4)
+
+**Before:**  
+A motor encoder establishes actuator motion but…
+
+**After:**  
+Deformation feedback is required for closed-loop control. Actuator motion alone does not provide local strain, so a conformable gauge is introduced and evaluated using electrical and mechanical metrics.
+
+---
+
+## 10. Defensive Results → dual-metric framing (L3)
+
+**Before:**  
+A high gauge factor alone cannot establish suitability. Importantly, the simulation does not prove experimental accuracy.
+
+**After:**  
+Performance is evaluated using both electrical response and mechanical demand. Experimental validation remains necessary for absolute accuracy.
+
+---
+
+## 11. Caption essay → reading aid (L4)
+
+**Before:**  
+This work is intentionally not plotted as a GF point because the present model does not include intrinsic piezoresistivity and should not be interpreted as a materials GF claim.
+
+**After (caption):**  
+Literature benchmark of reported gauge factor (GF) versus working strain range. Marker fill distinguishes primary and contextual values; marker shape denotes sensor family; the dashed line indicates the reference-strain range considered in this study.
+
+*(Move the modelling rationale to the main text.)*
+
+---
+
+## 12. In-figure defensive / insider labels (L4)
+
+**Before:** `our selected one` · `Not validated` · `current best`  
+**After:** `present design` · `Experimental verification pending` · `optimized configuration`
+
+---
+
+## 13. Checklist-style reasoning (L1)
 
 **Before:**  
 The calculation therefore keeps the bending-face strain near 1%, keeps one layout from Fig. 1(a), and accepts a design only when the voltage rises and the local peak falls inside the force limit.
@@ -70,7 +133,7 @@ The analysis evaluates a fixed conductor geometry at approximately 1% tensile st
 
 ---
 
-## 8. Roadmap meta (L2)
+## 14. Roadmap meta (L2)
 
 **Before:**  
 This section examines the principal design parameters that govern sensitivity, resolution, linearity, hysteresis, and SNR…
@@ -80,19 +143,11 @@ Sensitivity, resolution, linearity, hysteresis, and SNR are governed by material
 
 ---
 
-## 9. Lab-kit brand leakage (L1)
-
-**Before:**  
-B. Voltage Divider and Arduino ADC Readout. For a classical Arduino Uno, N = 10…
-
-**After:**  
-B. Voltage Divider and Microcontroller ADC Readout. For a 10-bit microcontroller ADC (N = 10)…
-
----
-
-## 10. Keep (do not over-scrub)
+## 15. Keep (do not over-scrub)
 
 **Keep:** Their sensitivity numbers use different definitions and loading ranges and should not be ranked directly.  
 **Keep:** …analogy, not direct evidence for flexible DIW electrodes.  
 **Keep:** R0 rises by more than q falls, so ΔV rises.  
-**Keep (cover only):** AI usage declaration required by the course.
+**Keep:** The signal is not a direct measurement of strain; it is derived from the resistance change.  
+**Keep (cover only):** AI usage declaration required by the course.  
+**Keep:** Occasional `we` where the disciplinary voice expects it and density is low.
